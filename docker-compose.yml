@@ -7,7 +7,7 @@ services:
     ports:
       - "3307:3306"
     env_file:
-      - ./config/.env
+      - .env
     environment:
       - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
       - MARIADB_DATABASE=${DB_NAME}
@@ -41,7 +41,7 @@ services:
     ports:
       - "8080:8080"
     env_file:
-      - ./config/.env
+      - .env
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mariadb://db:3306/${DB_NAME}?useSSL=false&serverTimezone=America/Argentina/Buenos_Aires&allowPublicKeyRetrieval=true
     depends_on:
@@ -57,7 +57,7 @@ services:
     ports:
       - "8081:80"
     env_file:
-      - ./config/.env
+      - .env
     environment:
       - PMA_HOST=${PMA_HOST} # Nombre del servicio de base de datos
       - PMA_PORT=${PMA_PORT} # Puerto interno

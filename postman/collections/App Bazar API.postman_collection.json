@@ -1,0 +1,800 @@
+{
+  "info": {
+    "name": "App-Bazar-API",
+    "description": "API collection for App-Bazar backend - Spring Boot application with Clientes, Productos, and Ventas resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "contextPath",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Clientes",
+      "item": [
+        {
+          "name": "GET /api/clientes",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes"]
+            }
+          }
+        },
+        {
+          "name": "GET /api/clientes/estado/:estadoCliente",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/estado/:estadoCliente",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "estado", ":estadoCliente"],
+              "variable": [
+                {
+                  "key": "estadoCliente",
+                  "value": "",
+                  "description": "Estado del cliente (enum)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/clientes/id/:id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/id/:id",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "id", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST /api/clientes/crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/crear",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "crear"]
+            }
+          }
+        },
+        {
+          "name": "PUT /api/clientes/editar/:id",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/editar/:id",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "editar", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/clientes/editar/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/editar/:id",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "editar", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/clientes/activar/:id",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/activar/:id",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "activar", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/clientes/inactivar/:id",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/inactivar/:id",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "inactivar", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/clientes/bloquear/:id",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/clientes/bloquear/:id",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "clientes", "bloquear", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Productos",
+      "item": [
+        {
+          "name": "GET /api/productos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos"]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/nombre/:nombre",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/nombre/:nombre",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "nombre", ":nombre"],
+              "variable": [
+                {
+                  "key": "nombre",
+                  "value": "",
+                  "description": "Product name (String)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/categoria/:categoria",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/categoria/:categoria",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "categoria", ":categoria"],
+              "variable": [
+                {
+                  "key": "categoria",
+                  "value": "",
+                  "description": "Product category (String)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/marca/:marca",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/marca/:marca",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "marca", ":marca"],
+              "variable": [
+                {
+                  "key": "marca",
+                  "value": "",
+                  "description": "Product brand (String)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/estado/:estado",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/estado/:estado",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "estado", ":estado"],
+              "variable": [
+                {
+                  "key": "estado",
+                  "value": "",
+                  "description": "Product state (enum)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/falta-stock",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/falta-stock",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "falta-stock"]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/precio-menor/:precio",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/precio-menor/:precio",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "precio-menor", ":precio"],
+              "variable": [
+                {
+                  "key": "precio",
+                  "value": "",
+                  "description": "Maximum price (BigDecimal)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/precio-mayor/:precio",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/precio-mayor/:precio",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "precio-mayor", ":precio"],
+              "variable": [
+                {
+                  "key": "precio",
+                  "value": "",
+                  "description": "Minimum price (BigDecimal)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/precio-rango",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/precio-rango?min=&max=",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "precio-rango"],
+              "query": [
+                {
+                  "key": "min",
+                  "value": "",
+                  "description": "Minimum price (BigDecimal)"
+                },
+                {
+                  "key": "max",
+                  "value": "",
+                  "description": "Maximum price (BigDecimal)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/productos/codigo/:codigo",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/codigo/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "codigo", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Product code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST /api/productos/crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/crear",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "crear"]
+            }
+          }
+        },
+        {
+          "name": "PUT /api/productos/editar/:codigo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/editar/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "editar", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Product code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/productos/editar/:codigo",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/editar/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "editar", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Product code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/productos/activar/:codigo",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/activar/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "activar", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Product code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/productos/inactivar/:codigo",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/inactivar/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "inactivar", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Product code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/productos/agotado/:codigo",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/agotado/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "agotado", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Product code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/productos/descontinuar/:codigo",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/descontinuar/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "productos", "descontinuar", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Product code (Long)"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ventas",
+      "item": [
+        {
+          "name": "GET /api/ventas",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas"]
+            }
+          }
+        },
+        {
+          "name": "GET /api/ventas/cliente/:idCliente",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/cliente/:idCliente",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "cliente", ":idCliente"],
+              "variable": [
+                {
+                  "key": "idCliente",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/ventas/fecha/:fDate",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/fecha/:fDate",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "fecha", ":fDate"],
+              "variable": [
+                {
+                  "key": "fDate",
+                  "value": "",
+                  "description": "Date (LocalDate, format: YYYY-MM-DD)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/ventas/estado/:estado",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/estado/:estado",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "estado", ":estado"],
+              "variable": [
+                {
+                  "key": "estado",
+                  "value": "",
+                  "description": "Sale state (enum)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/ventas/cliente-fecha",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/cliente-fecha?idCliente=&fecha=",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "cliente-fecha"],
+              "query": [
+                {
+                  "key": "idCliente",
+                  "value": "",
+                  "description": "Client ID (Long)"
+                },
+                {
+                  "key": "fecha",
+                  "value": "",
+                  "description": "Date (LocalDate, format: YYYY-MM-DD)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/ventas/codigo/:codigo",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/codigo/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "codigo", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Sale code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/ventas/mayor-venta",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/mayor-venta",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "mayor-venta"]
+            }
+          }
+        },
+        {
+          "name": "GET /api/ventas/estadistica-dia/:fechaVenta",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/estadistica-dia/:fechaVenta",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "estadistica-dia", ":fechaVenta"],
+              "variable": [
+                {
+                  "key": "fechaVenta",
+                  "value": "",
+                  "description": "Sale date (LocalDate, format: YYYY-MM-DD)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST /api/ventas/crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/crear",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "crear"]
+            }
+          }
+        },
+        {
+          "name": "PUT /api/ventas/editar/:codigo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/editar/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "editar", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Sale code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/ventas/editar/:codigo",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/editar/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "editar", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Sale code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/ventas/marcar-pagada/:codigo",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/marcar-pagada/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "marcar-pagada", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Sale code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/ventas/marcar-entregada/:codigo",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/marcar-entregada/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "marcar-entregada", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Sale code (Long)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/ventas/marcar-cancelada/:codigo",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}{{contextPath}}/api/ventas/marcar-cancelada/:codigo",
+              "host": ["{{baseUrl}}{{contextPath}}"],
+              "path": ["api", "ventas", "marcar-cancelada", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "",
+                  "description": "Sale code (Long)"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
