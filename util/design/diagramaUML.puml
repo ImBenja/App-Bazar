@@ -1,0 +1,233 @@
+
+@startuml
+
+title API Bazar - Aplicacion Web para un Bazar (Diseño Refinado)
+
+' ==========================
+' PAQUETES DTOs
+' ==========================
+package "DTOs (Requests CREATE)" {
+
+  class ProductoCreateRequestDTO <<DTO>> {
+    - String nombre
+    - String marca
+    - String categoria
+    - BigDecimal precio
+    - Integer stock
+  }
+
+  class ClienteCreateRequestDTO <<DTO>> {
+    - String nombre
+    - String apellido
+    - String dni
+  }
+
+  class DetalleVentaCreateRequestDTO <<DTO>> {
+    - Long productoId
+    - Integer cantidad
+  }
+
+  class VentaCreateRequestDTO <<DTO>> {
+    - Long idCliente
+    - List<DetalleVentaRequestDTO> detalles
+  }
+}
+
+
+
+package "DTOs (Responses)" {
+  
+  class ProductoResponseDTO <<DTO>> {
+    - Long codigoProducto
+    - String nombre
+    - String marca
+    - String categoria
+    - BigDecimal precio
+    - Integer stock
+    - String estado
+    - LocalDateTime createdAt
+    - LocalDateTime updatedAt
+  }
+
+  class ClienteResponseDTO <<DTO>> {
+    - Long id
+    - String nombre
+    - String apellido
+    - String dni
+    - String estado
+    - LocalDateTime createdAt
+    - LocalDateTime updatedAt
+  }
+
+  class DetalleVentaResponseDTO <<DTO>> {
+    - Long productoId
+    - String productoNombre
+    - Integer cantidad
+    - BigDecimal precioUnitario
+    - BigDecimal subtotal
+  }
+
+  class VentaResponseDTO <<DTO>> {
+    - Long codigoVenta
+    - LocalDate fecha
+    - String estado
+    - ClienteResponseDTO cliente
+    - List<DetalleVentaResponseDTO> detalles
+    - BigDecimal total
+    - LocalDateTime createdAt
+    - LocalDateTime updatedAt
+  }
+
+  class MayorVentaDTO <<DTO>> {
+    - Long codigoVenta
+    - BigDecimal total
+    - Integer cantidad
+    - String nombreCliente
+    - String apellidoCliente
+  }
+}
+
+
+
+' =========================
+' PAQUETE ENUMS
+' =========================
+package "Enums" {
+
+  enum EstadoVenta {
+    PENDIENTE
+    PAGADA
+    ENTREGADA
+    CANCELADA
+  } 
+
+  enum EstadoProducto {
+    ACTIVO
+    INACTIVO
+    AGOTADO
+    DESCONTINUADO
+  }
+
+  enum EstadoCliente {
+    ACTIVO
+    INACTIVO
+    BLOQUEADO
+  }
+}
+
+' ==========================
+' CLASES DE DOMINIO
+' ==========================
+package "Model" {
+
+class Producto {
+  - Long codigoProducto
+  - String nombre
+  - String marca
+  - String categoria
+  - BigDecimal precio
+  - Integer stock
+  - EstadoProducto estado
+  - LocalDateTime createdAt
+  - LocalDateTime updatedAt
+  --
+  # onCreate()
+  # onUpdate()
+  + activar(): Void
+  + inactivar(): Void
+  + marcarAgotado(): Void
+  + descontinuar(): Void
+}
+
+class Venta {
+  - Long codigoVenta 
+  - LocalDate fechaVenta
+  - BigDecimal total
+  - List<DetalleVenta> detalles
+  - Cliente cliente
+  - EstadoVenta estado
+  - LocalDateTime createdAt
+  - LocalDateTime updatedAt
+  --
+  # onCreate(): Void
+  # onUpdate(): Void
+  + calcularTotal(): BigDecimal
+  + validarStock(): Boolean
+  + descontarStock(): Void
+  + cambiarEstado(nuevoEstado: EstadoVenta): Void
+}
+
+class Cliente {
+  - Long id
+  - String nombre
+  - String apellido
+  - String dni
+  - EstadoCliente estado
+  - LocalDateTime createdAt
+  - LocalDateTime updatedAt
+  --
+  # onCreate(): Void
+  # onUpdate(): Void
+  + activar(): Void
+  + inactivar(): Void
+  + bloquear(): Void
+}
+
+class DetalleVenta {
+  - Long id
+  - Integer cantidad
+  - Producto producto
+  - Venta venta
+  - BigDecimal precioUnitario
+  - BigDecimal subtotal
+  - LocalDateTime createdAt
+  - LocalDateTime updatedAt
+  --
+  # onCreate()
+  # onUpdate()
+  + calcularSubtotal(): BigDecimal
+}
+}
+
+' ========================
+' RELACIONES ENTRE ENTIDADES
+' ========================
+Cliente "1" o-- "0..*" Venta : realiza
+Venta "1" o-- "1..*" DetalleVenta : contiene
+Producto "1" o-- "0..*" DetalleVenta : aparece en
+
+' =========================
+' RELACIONES DTO <-> DOMINIO
+' =========================
+ProductoCreateRequestDTO ..> Producto : mapea a
+ProductoResponseDTO ..> Producto : se construye desde
+
+ClienteCreateRequestDTO ..> Cliente : mapea a
+ClienteResponseDTO ..> Cliente : se construye desde
+
+VentaCreateRequestDTO ..> Venta : mapea a
+VentaResponseDTO ..> Venta : se construye desde
+
+DetalleVentaCreateRequestDTO ..> DetalleVenta : mapea a
+DetalleVentaResponseDTO ..> DetalleVenta : se construye desde
+
+' ==========================
+' ERROR HANDLING
+' ==========================
+package "Error" {
+  class BussinesException
+  class NotFoundException
+  class ErrorResponse {
+    - int status
+    - String message
+    - LocalDateTime timestamp
+    - List<String> details
+  }
+  class GlobalExceptionHandle
+}
+
+GlobalExceptionHandle ..> BussinesException
+GlobalExceptionHandle ..> NotFoundException
+GlobalExceptionHandle ..> ErrorResponse
+
+@enduml

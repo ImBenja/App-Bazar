@@ -1,0 +1,32 @@
+# Entornos y configuración local
+.env
+.env.*
+!.env.example
+**/backups/
+.backend/backups
+*.local
+
+# Docker
+**/Dockerfile
+**/docker-compose*.yml
+!docker-compose.yml  # Excepto el principal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Binarios
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Backup
+*.bak
+*.backup

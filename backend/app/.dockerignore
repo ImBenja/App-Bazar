@@ -1,0 +1,85 @@
+# ==========================
+# = Git
+# ==========================
+.git
+.gitignore
+.gitattributes
+
+# ==========================
+# = Entornos y config local
+# ==========================
+.env
+.env.*
+!.env.example
+*.local
+application-local.properties
+application-local.properties
+application-dev.properties
+application-test.properties
+
+# ==========================
+# = IDE
+# ==========================
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings
+.factorypath
+.springBeans
+
+# ==========================
+# = Logs
+# ==========================
+logs/
+*.log
+
+# ==========================
+# = Build temporales
+# ==========================
+target/
+!target/*.jar  # EXCEPTO el JAR final (lo necesitamos)
+*.jar
+!target/*.jar
+*.war
+*.ear
+*.sw?
+*~
+*.bak
+*.tmp
+*.temp
+
+# ==========================
+# = Docker (evitar recursión)
+# ==========================
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# ==========================
+# = Documentación (no necesaria en imagen)
+# ==========================
+README.md
+LICENSE
+docs/
+*.md
+!README.md
+
+# ==========================
+# = Archivos del sistema
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ==========================
+# = Tests (no van a producción)
+# ==========================
+test/
+src/test/
+*.test.js
+*.spec.js
