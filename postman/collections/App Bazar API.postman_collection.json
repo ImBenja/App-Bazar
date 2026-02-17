@@ -1,44 +1,50 @@
 {
   "info": {
+    "_postman_id": "7f190826-efbb-4f02-8298-dba9bb79b57c",
     "name": "App-Bazar-API",
     "description": "API collection for App-Bazar backend - Spring Boot application with Clientes, Productos, and Ventas resources.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
-  "variable": [
-    {
-      "key": "baseUrl",
-      "value": "http://localhost:8080",
-      "type": "string"
-    },
-    {
-      "key": "contextPath",
-      "value": "",
-      "type": "string"
-    }
-  ],
   "item": [
     {
       "name": "Clientes",
       "item": [
         {
           "name": "GET /api/clientes",
+          "id": "3ef24c4c-3ec5-4a68-9c40-f5cfeffa5dff",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/clientes/estado/:estadoCliente",
+          "id": "dca11a18-6755-4690-8973-c90bce842336",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/estado/:estadoCliente",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "estado", ":estadoCliente"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "estado",
+                ":estadoCliente"
+              ],
               "variable": [
                 {
                   "key": "estadoCliente",
@@ -47,16 +53,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/clientes/id/:id",
+          "id": "d8c33e13-2fa8-4fd7-abcd-378e1444e1c9",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/id/:id",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "id", ":id"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "id",
+                ":id"
+              ],
               "variable": [
                 {
                   "key": "id",
@@ -65,10 +81,12 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "POST /api/clientes/crear",
+          "id": "08b16453-8456-4f48-9edb-564892020a91",
           "request": {
             "method": "POST",
             "header": [
@@ -83,13 +101,21 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/crear",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "crear"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "crear"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PUT /api/clientes/editar/:id",
+          "id": "75d3e4a2-13ae-4753-96bf-dfb9dd721dc4",
           "request": {
             "method": "PUT",
             "header": [
@@ -104,8 +130,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/editar/:id",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "editar", ":id"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "editar",
+                ":id"
+              ],
               "variable": [
                 {
                   "key": "id",
@@ -114,10 +147,12 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/clientes/editar/:id",
+          "id": "729c4b21-b030-4879-9c3c-cd1a838a7f43",
           "request": {
             "method": "PATCH",
             "header": [
@@ -132,8 +167,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/editar/:id",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "editar", ":id"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "editar",
+                ":id"
+              ],
               "variable": [
                 {
                   "key": "id",
@@ -142,16 +184,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/clientes/activar/:id",
+          "id": "c751c70d-9e51-476e-b5a1-2953cce2f012",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/activar/:id",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "activar", ":id"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "activar",
+                ":id"
+              ],
               "variable": [
                 {
                   "key": "id",
@@ -160,16 +212,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/clientes/inactivar/:id",
+          "id": "3e822934-05b5-4b43-bf5a-67241cb35527",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/inactivar/:id",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "inactivar", ":id"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "inactivar",
+                ":id"
+              ],
               "variable": [
                 {
                   "key": "id",
@@ -178,16 +240,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/clientes/bloquear/:id",
+          "id": "3788e447-f985-4a09-8fe2-e8842f77d786",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/clientes/bloquear/:id",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "clientes", "bloquear", ":id"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "bloquear",
+                ":id"
+              ],
               "variable": [
                 {
                   "key": "id",
@@ -196,32 +268,51 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         }
-      ]
+      ],
+      "id": "8ddf610f-c93a-4f78-a6ad-0593ae8be2c3"
     },
     {
       "name": "Productos",
       "item": [
         {
           "name": "GET /api/productos",
+          "id": "c48140b3-95af-41dd-85f3-40016b1c8aa6",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/nombre/:nombre",
+          "id": "6df4b02d-18af-4cb1-bf17-89969d284ccd",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/nombre/:nombre",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "nombre", ":nombre"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "nombre",
+                ":nombre"
+              ],
               "variable": [
                 {
                   "key": "nombre",
@@ -230,16 +321,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/categoria/:categoria",
+          "id": "86a67fe3-47ea-4970-9543-192449dc963b",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/categoria/:categoria",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "categoria", ":categoria"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "categoria",
+                ":categoria"
+              ],
               "variable": [
                 {
                   "key": "categoria",
@@ -248,16 +349,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/marca/:marca",
+          "id": "cac48a18-56da-4254-8e5d-e9b2d2496857",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/marca/:marca",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "marca", ":marca"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "marca",
+                ":marca"
+              ],
               "variable": [
                 {
                   "key": "marca",
@@ -266,16 +377,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/estado/:estado",
+          "id": "ca089d6f-b5e3-4979-960a-8e56c3b04548",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/estado/:estado",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "estado", ":estado"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "estado",
+                ":estado"
+              ],
               "variable": [
                 {
                   "key": "estado",
@@ -284,27 +405,46 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/falta-stock",
+          "id": "c2941816-ad03-4260-8ceb-b26b3eaad527",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/falta-stock",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "falta-stock"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "falta-stock"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/precio-menor/:precio",
+          "id": "ff72213f-ddd3-4414-a1d5-1700c65cf3c8",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/precio-menor/:precio",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "precio-menor", ":precio"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "precio-menor",
+                ":precio"
+              ],
               "variable": [
                 {
                   "key": "precio",
@@ -313,16 +453,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/precio-mayor/:precio",
+          "id": "326a1b3f-da43-47d7-a890-8669109a22c4",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/precio-mayor/:precio",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "precio-mayor", ":precio"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "precio-mayor",
+                ":precio"
+              ],
               "variable": [
                 {
                   "key": "precio",
@@ -331,16 +481,25 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/precio-rango",
+          "id": "0b7ca0dd-ed46-4d78-8d11-a4b8740875d3",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/precio-rango?min=&max=",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "precio-rango"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "precio-rango"
+              ],
               "query": [
                 {
                   "key": "min",
@@ -354,28 +513,33 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/productos/codigo/:codigo",
+          "id": "72968563-344a-4844-bac0-d066e97fff97",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
-              "raw": "{{baseUrl}}{{contextPath}}/api/productos/codigo/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "codigo", ":codigo"],
-              "variable": [
-                {
-                  "key": "codigo",
-                  "value": "",
-                  "description": "Product code (Long)"
-                }
+              "raw": "{{baseUrl}}{{contextPath}}/api/productos/codigo/1",
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "codigo",
+                "1"
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "POST /api/productos/crear",
+          "id": "81e42c98-20ae-4e89-9486-2089e44e2eec",
           "request": {
             "method": "POST",
             "header": [
@@ -390,13 +554,21 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/crear",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "crear"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "crear"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PUT /api/productos/editar/:codigo",
+          "id": "b17cb9f5-031c-4a66-acc7-10dc214d6d72",
           "request": {
             "method": "PUT",
             "header": [
@@ -411,8 +583,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/editar/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "editar", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "editar",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -421,10 +600,12 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/productos/editar/:codigo",
+          "id": "99fae9b7-7134-47a5-830a-2127a5813674",
           "request": {
             "method": "PATCH",
             "header": [
@@ -439,8 +620,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/editar/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "editar", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "editar",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -449,16 +637,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/productos/activar/:codigo",
+          "id": "3ce6e6af-ddba-4591-9dab-bec55dc60991",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/activar/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "activar", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "activar",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -467,16 +665,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/productos/inactivar/:codigo",
+          "id": "f84033fa-42b8-4d9e-bb90-00f0760eec77",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/inactivar/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "inactivar", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "inactivar",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -485,16 +693,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/productos/agotado/:codigo",
+          "id": "c76ce955-b19e-4799-9f55-cfd55dbf85be",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/agotado/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "agotado", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "agotado",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -503,16 +721,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/productos/descontinuar/:codigo",
+          "id": "2d58f11f-26da-4266-89bc-5c2c74901c46",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/productos/descontinuar/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "productos", "descontinuar", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                "descontinuar",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -521,32 +749,51 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         }
-      ]
+      ],
+      "id": "29d7a732-3120-4cdc-ad0d-e60973216d93"
     },
     {
       "name": "Ventas",
       "item": [
         {
           "name": "GET /api/ventas",
+          "id": "7b654a9a-0a9c-4e3c-8698-1126bfea6bb2",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/ventas/cliente/:idCliente",
+          "id": "5e12abf6-e3a1-41b5-afa8-a84b95770b6a",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/cliente/:idCliente",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "cliente", ":idCliente"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "cliente",
+                ":idCliente"
+              ],
               "variable": [
                 {
                   "key": "idCliente",
@@ -555,16 +802,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/ventas/fecha/:fDate",
+          "id": "bfd63cf2-06ac-4ec7-882a-db2116c6a60f",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/fecha/:fDate",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "fecha", ":fDate"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "fecha",
+                ":fDate"
+              ],
               "variable": [
                 {
                   "key": "fDate",
@@ -573,16 +830,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/ventas/estado/:estado",
+          "id": "381f32ba-118e-4bc9-abec-11b7b28b0416",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/estado/:estado",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "estado", ":estado"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "estado",
+                ":estado"
+              ],
               "variable": [
                 {
                   "key": "estado",
@@ -591,16 +858,25 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/ventas/cliente-fecha",
+          "id": "85db537c-2547-498f-a836-c50d0b737dfb",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/cliente-fecha?idCliente=&fecha=",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "cliente-fecha"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "cliente-fecha"
+              ],
               "query": [
                 {
                   "key": "idCliente",
@@ -614,16 +890,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/ventas/codigo/:codigo",
+          "id": "a5590d20-08e1-4c0a-b69a-a51de1e8d897",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/codigo/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "codigo", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "codigo",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -632,27 +918,46 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/ventas/mayor-venta",
+          "id": "2b03b542-6c1d-46e2-b17a-a8ee6759b4a5",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/mayor-venta",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "mayor-venta"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "mayor-venta"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "GET /api/ventas/estadistica-dia/:fechaVenta",
+          "id": "e43e3d9d-5094-47ac-8bbb-b6254505f1b4",
           "request": {
             "method": "GET",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/estadistica-dia/:fechaVenta",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "estadistica-dia", ":fechaVenta"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "estadistica-dia",
+                ":fechaVenta"
+              ],
               "variable": [
                 {
                   "key": "fechaVenta",
@@ -661,10 +966,12 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "POST /api/ventas/crear",
+          "id": "8d2e565a-a152-4351-8f63-8c8b8a30246f",
           "request": {
             "method": "POST",
             "header": [
@@ -679,13 +986,21 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/crear",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "crear"]
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "crear"
+              ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PUT /api/ventas/editar/:codigo",
+          "id": "80b69bf0-f019-4eed-8181-a267a2924893",
           "request": {
             "method": "PUT",
             "header": [
@@ -700,8 +1015,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/editar/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "editar", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "editar",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -710,10 +1032,12 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/ventas/editar/:codigo",
+          "id": "8e12def2-c950-4aa9-b735-f982beac9d7a",
           "request": {
             "method": "PATCH",
             "header": [
@@ -728,8 +1052,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/editar/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "editar", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "editar",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -738,16 +1069,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/ventas/marcar-pagada/:codigo",
+          "id": "6360d955-3e16-43e5-8a8e-0050fbc1defa",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/marcar-pagada/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "marcar-pagada", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "marcar-pagada",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -756,16 +1097,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/ventas/marcar-entregada/:codigo",
+          "id": "89bfceae-589b-4d99-acbf-0e579eb7c2a1",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/marcar-entregada/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "marcar-entregada", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "marcar-entregada",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -774,16 +1125,26 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "PATCH /api/ventas/marcar-cancelada/:codigo",
+          "id": "7ee5d729-167e-4c8e-a4a5-b3713925df9e",
           "request": {
             "method": "PATCH",
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}{{contextPath}}/api/ventas/marcar-cancelada/:codigo",
-              "host": ["{{baseUrl}}{{contextPath}}"],
-              "path": ["api", "ventas", "marcar-cancelada", ":codigo"],
+              "host": [
+                "{{baseUrl}}{{contextPath}}"
+              ],
+              "path": [
+                "api",
+                "ventas",
+                "marcar-cancelada",
+                ":codigo"
+              ],
               "variable": [
                 {
                   "key": "codigo",
@@ -792,9 +1153,25 @@
                 }
               ]
             }
-          }
+          },
+          "response": []
         }
-      ]
+      ],
+      "id": "ef0178c3-eefc-4f8d-9ac7-01b19704a3b1"
+    }
+  ],
+  "variable": [
+    {
+      "id": "a10988c4-b411-4232-aa9b-76a632d80989",
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "id": "39d13ffd-37f3-4cb7-a9dc-d96669788389",
+      "key": "contextPath",
+      "value": "",
+      "type": "string"
     }
   ]
 }
