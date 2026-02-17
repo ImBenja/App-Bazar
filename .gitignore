@@ -2,33 +2,33 @@
 .env
 .env.*
 !.env.example
-**/backups/
-.backend/backups
 *.local
-.gitignore
+
+# Backups
+**/backups/
+**/backup/
 
 # Docker
 **/Dockerfile
 **/docker-compose*.yml
-!docker-compose.yml  # Excepto el principal
-.dockerignore
+!docker-compose.yml
+**/.dockerignore
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+backend/app/src/main/java/com/bazar/app/config/
+
+# archivos compilados
+**/target/
+**/build/
+**/bin/
 
 # Logs
-*.log
+**/*.log
 
-# Binarios
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Backup
-*.bak
-*.backup
+# IDE
+**/.idea/
+**/.vscode/
+**/*.iml
+**/.classpath
+**/.project
+**/.settings
+**/.factorypath

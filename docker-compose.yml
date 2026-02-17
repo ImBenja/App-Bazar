@@ -1,0 +1,79 @@
+version: "3.8"
+
+services:
+  db:
+    image: mariadb:10.11
+    container_name: mariadb-bazar
+    ports:
+      - "3307:3306"
+    env_file:
+      - ./config/.env
+    environment:
+      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=${DB_NAME}
+      - MARIADB_USER=${DB_USER}
+      - MARIADB_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - app-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-p${DB_ROOT_PASSWORD}",
+        ]
+      timeout: 10s
+      retries: 5
+
+  app:
+    build:
+      context: ./backend/app
+      dockerfile: Dockerfile
+    container_name: app-bazar-container
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./config/.env
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://db:3306/${DB_NAME}?useSSL=false&serverTimezone=America/Argentina/Buenos_Aires&allowPublicKeyRetrieval=true
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin-bazar
+    ports:
+      - "8081:80" # Accederás en http://localhost:8081
+    env_file:
+      - ./config/.env
+    environment:
+      - PMA_HOST=${PMA_HOST} # Nombre del servicio de base de datos
+      - PMA_PORT=${PMA_PORT} # Puerto interno
+      - PMA_USER=${PMA_USER} # Usuario
+      - PMA_PASSWORD=${PMA_PASSWORD} # Contraseña
+      - UPLOAD_LIMIT=${UPLOAD_LIMIT} # Límite para imports grandes
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mariadb_data:
+    driver: local
