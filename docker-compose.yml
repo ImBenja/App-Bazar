@@ -55,7 +55,7 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin-bazar
     ports:
-      - "8081:80" # Accederás en http://localhost:8081
+      - "8081:80"
     env_file:
       - ./config/.env
     environment:

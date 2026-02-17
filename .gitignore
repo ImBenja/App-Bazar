@@ -14,7 +14,6 @@
 !docker-compose.yml
 **/.dockerignore
 
-backend/app/src/main/java/com/bazar/app/config/
 
 # archivos compilados
 **/target/
